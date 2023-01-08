@@ -1,0 +1,70 @@
+----- Command for creating a Database--------------
+
+Create database BasicQueryLecutre1;
+
+
+-----Command to show all the databases present--------
+
+Show databases;
+
+
+
+------Command to delete the existing database--------
+
+Drop database rajesh;
+
+
+
+-------Go inside the database in which you want to create tables, if multiple databases are present---------
+
+Use BasicQueryLecutre1;
+
+
+
+-----Command to create a table with all the datatype possible----------------
+
+Create table if not exists employee(
+FirstName varchar(50),
+Address varchar(20),
+SecondName varchar(50),
+EmployeeId  int(10),
+DOB date,
+DOJ date
+);
+
+-----Command to display a table----------------
+
+Select * from employee;
+
+-----Inserting values into the table------------
+
+---Method 1-----
+
+Insert into employee values('Pranjal','Noida-Sector34','Mehrotra',12,'1997/09/15','2023/01/09');
+
+----Method 2-------
+
+Insert into employee(FirstName,Address,SecondName,EmployeeId,DOB,DOJ)
+values
+('Pranjal1','Noida-Sector34','Mehrotra',12,'1997/09/15','2023/01/09'),
+('Pranjal2','Noida-Sector34','Mehrotra',12,'1997/09/15','2023/01/09'),
+('Pranjal3','Noida-Sector34','Mehrotra',12,'1997/09/15','2023/01/09')
+
+-----Always try to insert the data using the apporach of method 2 ----------
+
+
+-----Now if we want to insert only specific column values in the table then we can do by the following way---------
+
+
+Insert into employee(FirstName,Address,SecondName,EmployeeId)
+values
+('Pranjal1','Noida-Sector34','Mehrotra',12),
+('Pranjal2','Noida-Sector34','Mehrotra',12),
+('Pranjal3','Noida-Sector34','Mehrotra',12);
+
+------Here, all the columns except DOB and DOJ will be NULL as it will not contain any values in the it.-------------
+
+
+
+
+
