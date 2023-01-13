@@ -48,6 +48,49 @@ insert into employee_table_with_constraints(id,employeename,salary,hiring_date)v
 Output:
 
 Error: Column employeename cannot be null
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Case 3 :
+
+Passing the value < 10000 in the salary column:
+
+insert into employee_table_with_constraints(id,employeename,salary,hiring_date)values(3,'Pranjal',500,'2022-09-12');
+
+Output:
+
+Error : Check constraint 'employee_table_with_constraints_chk_1' is violated.
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Case 4 :
+
+Now we want to check the integrity constraint of unique id:
+
+insert into employee_table_with_constraints(id,employeename,salary,hiring_date)values(1,'Pranjal',15000,'2022-09-12');
+
+insert into employee_table_with_constraints(id,employeename,salary,hiring_date)values(1,'Pranjal',15000,'2022-09-12');
+
+Now we have inserted id as 1 in above table and again we are trying to insert the same value(1) in id .
+
+Output:
+
+Error:Duplicate Entry '1' for key employee_table_with_constraints.id
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Case 5:
+
+Now we want to check the integrity constraint of default which has been set in the hiring_date column:
+
+
+insert into employee_table_with_constraints(id,employeename,salary)values(4,'Pranjal',15000);
+
+Output:
+
+Here in the above table (employee_table_with_constraints) we have set default hiring date as 2022-01-14.
+It has been inserted in the table column.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
   
