@@ -1,0 +1,64 @@
+-----------Integrity Constraints in SQL----------------------
+
+---------- Integrity Constraints are used so they can keep the data consistent wrt data quality.----------
+
+The major types of integrity constraints which are used in SQL are:
+1.NOT NULL
+2.UNIQUE
+3.PRIMARY KEY
+4.FOREIGN KEY
+5.CHECK
+6.CREATE INDEX
+----------------------------------------------------------------------------------------------------------------------------------
+
+------Table creation along with the (integrity constraints) in the same database as used in basic query 1------------------------
+
+
+CREATE TABLE if not exists employee_table_with_constraints(
+  id int NOT NULL,
+  employeename varchar(50) NOT NULL,
+  salary double DEFAULT NULL,
+  hiring_date date DEFAULT '2022-01-14',
+  UNIQUE KEY  (id),
+  CHECK (salary > 10000)
+  );
+  
+  ------------------------------------------------------------------------------------------------------------------------------------
+  
+CASES TO CHECK THE INTEGRITY CONSTRAINTS:
+  
+Case 1 :
+  
+Now here we are passing the id as null but in actual we have defined id cannot be null.
+
+Insert into employee_table_with_constraints(id,employeename,salary,hiring_date)values(null,'Pranjal',12000,'2022-09-12');
+
+Output:
+
+Error: Column id cannot be null
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Case 2 :
+
+Passing the null value in employeename column in the above table:
+
+insert into employee_table_with_constraints(id,employeename,salary,hiring_date)values(3,null,12000,'2022-09-12');
+
+Output:
+
+Error: Column employeename cannot be null
+
+
+  
+  
+ 
+ 
+ 
+ 
+
+
+
+
+
+
