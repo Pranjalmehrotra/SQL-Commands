@@ -1,0 +1,46 @@
+-------------------------------------------Basic_Query_3---------------------------------------------------
+create database basic_query_3;
+
+use basic_query_3;
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+create table if not exists employee_advance_queries(
+first_name  varchar(30) NOT NULL,
+last_name varchar(50) NOT NULL,
+employee_id int(10) NOTNULL);
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+Select * from employee_advance_queries;
+
+--------------------------------------------------------------------------------------------------------------
+
+
+---------Adding a new Column(DOB)of type date in the  above table----------------------------
+
+
+
+alter table employee_advance_queries add DOB date;
+
+
+----------------------------------------------------------------------------------------------
+
+
+Select * from employee_advance_queries;
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+----------Adding a new column(Address)of type varchar in the above table---------------------
+
+alter table employee_advance_queries add Address varchar(50) not null;
+
+---------------------------------------------------------------------------------------------
+
+Select * from employee_advance_queries;
+
+---------------------------------------------------------------------------------------------
