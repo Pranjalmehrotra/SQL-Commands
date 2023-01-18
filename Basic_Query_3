@@ -33,29 +33,71 @@ alter table employee_advance_queries add DOB date;
 
 Select * from employee_advance_queries;
 
+
 -------------------------------------------------------------------------------------------------------------------------------------
+
 
 ----------Adding a new column(Address)of type varchar in the above table---------------------
 
+
 alter table employee_advance_queries add Address varchar(50) not null;
+
 
 ---------------------------------------------------------------------------------------------
 
 Select * from employee_advance_queries;
 
+
 ---------------------------------------------------------------------------------------------
 
 -----------DIFFERENCE BETWEEN DROP AND DELETE------------------
 
+
 DROP CLAUSE is used when we want to drop the entire table(i.e table + record) deletion will be there.
 By using the drop clause/command, the entire table will be removed completely.
 -----------------------------------------------------------------------------------------------------
+
 
 DELETE Command is used when we want to delete certain column/records present in the table or the entire record present in the table but 
 the table creation will remain there in the database.
 
 ------------------------------------------------------------------------------------------------------
 
+-----------Droping a specific column present in the table(Here we want to drop the last_name column)-------------
 
+
+alter table employee_advance_queries drop column last_name;
+
+-------------------------------------------------------------------------------------------------------
+
+-----------Renaming a specific column name present in the table(Here we want to rename first_name to full_name)
+
+
+alter table employee_advance_queries rename column first_name to full_name;
+
+------------------------------------------------------------------------------------------------------
+
+----------Adding a constraints to the column of the already defined table--------------------------
+
+--------- Here, we want to add the constraint unique in the column employee_id------------
+
+alter table employee_advance_queries add constraint employee_id_unique unique(employee_id);
+
+------------------------------------------------------------------------------------------------------------------
+
+------Now in order to check the validity of the above constraint, we will insert the employee_id as 1 because 1 has been already inserted into the database--------
+
+Insert into employee_advance_queries(full_name,employee_id,DOB,address)values('NANDI',1,'1997-09-15','ALLAHABAD');
+
+
+The above lines gives us the following error:
+
+
+Error Code: 1062. Duplicate entry '1' for key 'employee_advance_queries.employee_id_unique'
+
+
+-------------The above error indicates that unique constraint has been applied successfully------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
