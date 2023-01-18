@@ -44,3 +44,18 @@ alter table employee_advance_queries add Address varchar(50) not null;
 Select * from employee_advance_queries;
 
 ---------------------------------------------------------------------------------------------
+
+-----------DIFFERENCE BETWEEN DROP AND DELETE------------------
+
+DROP CLAUSE is used when we want to drop the entire table(i.e table + record) deletion will be there.
+By using the drop clause/command, the entire table will be removed completely.
+-----------------------------------------------------------------------------------------------------
+
+DELETE Command is used when we want to delete certain column/records present in the table or the entire record present in the table but 
+the table creation will remain there in the database.
+
+------------------------------------------------------------------------------------------------------
+
+
+
+
