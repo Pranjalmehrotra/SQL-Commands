@@ -1,0 +1,40 @@
+                                            ------------KEY CONCEPTS OF MYSQL----------------------
+
+-------Creating table with the Primary key Constraints-----------
+
+--------Method one---------
+
+Create table table_key_constraints(
+id int,
+name varchar(40),
+age int(40),
+primary key (id),
+
+
+Note---->Always follow the method 2 approach-----------
+
+------------------------------------------------------------------------------------------------------------
+
+--------Method two---------
+
+Create table table_key_constraints(
+id int,
+name varchar(40),
+age int(40),
+constraint primaryconstraint primary key (id)
+);
+
+-------------------------------------------------------------------------------------------------------------
+
+
+-----------Now if we want to add one more column to the primary key constraint then  we can do by:
+
+
+Create table table_key_constraints(
+id int,
+name varchar(40),
+age int(40),
+constraint primaryconstraint primary key (id,name)
+);
+
+----------------------------------------------------------------------------------------------------------------
