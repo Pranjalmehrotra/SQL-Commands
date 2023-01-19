@@ -96,6 +96,46 @@ Message: 1 row(s) affected
 
 --------------------------------------------------------------------------------------------------------------------------
 
+                              ---------CONCEPT OF FOREIGN KEY AND IMPLEMENTING IN MYSQL------------
+
+-----We will be creating 2 tables:
+
+Table 1----> customer
+Table 2----> Orders
+
+
+use basic_query_3;
+
+create table customer(
+cus_id int(10),
+cus_name varchar(50),
+cus_address varchar(50)
+);
+
+alter table customer add constraint pk primary key(cus_id);
+
+---------------------------------------------------------------------------------------------
+
+create table orders(
+order_id int(10),
+customer_id int(10),
+order_num int(10),
+constraint pk primary key(order_id),
+constraint fk foreign key(customer_id) references customer(cus_id)
+);
+----------------------------------------------------------------------------------------------
+
+------Now in order to define the forein key we have to use the above syntax.-----------
+
+Now for the table customer, primary key is cus_id column
+
+Similarly, for the table orders, primary key is order_id and the foreign key is customer_id which is mapped to the cus_id column of the table customer.
+
+-----------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
