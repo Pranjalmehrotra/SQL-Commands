@@ -38,3 +38,33 @@ constraint primaryconstraint primary key (id,name)
 );
 
 ----------------------------------------------------------------------------------------------------------------
+
+------Inserting the values into the above created table-----------
+
+Insert into table_key_constraints(id,name,age,address) values(1,'Pranjal',25,'ALLAHABAD');
+
+----------------------------------------------------------------------------------------------------------------
+
+-------Inserting the duplicate id value--------------
+
+Insert into table_key_constraints(id,name,age,address) values(1,'PranjalI',27,'ALLAHABAD');
+
+Error:Error Code: 1062. Duplicate entry '1' for key 'table_key_constraints.PRIMARY'
+
+---------------------------------------------------------------------------------------------------------------
+
+---------Inserting the null value into the primary key column------------
+
+Insert into table_key_constraints(id,name,age,address) values(null,'PranjalI',27,'ALLAHABAD');
+
+Error:Error Code: 1048. Column 'id' cannot be null
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
