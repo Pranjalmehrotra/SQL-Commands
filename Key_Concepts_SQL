@@ -62,6 +62,41 @@ Error:Error Code: 1048. Column 'id' cannot be null
 --------------------------------------------------------------------------------------------------------------
 
 
+ ------------DIFFERENCE BETWEEN UNIQUE AND PRIMARY KEY CONSTRAINT----------------
+
+--------UNIQUE constraint can take null values----------
+
+--------Primary Key cannot take null values.The column on which primary key has been defined should not be null-----------
+
+---------------------------------------------------------------------------------------------------------------------------
+
+---------Adding the UNIQUE constraint in the above table-----------
+
+alter table table_key_constraint add constraint employee_age_unique unique(age);
+
+--------------------------------------------------------------------------------------------------------
+
+-------Now we are trying to insert the age as 27 into the table again--------
+
+insert into table_key_constraints(id,name,age,address)values(4,'Nandi',27,'Allahabad');
+
+Error:Error Code: 1062. Duplicate entry '27' for key 'table_key_constraints.employee_age_unique'
+
+-------------The error is coming because the 27 number is already present in the record.Due to the unique contraint, it is giving the errors.------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----Now we are trying to insert the null value into the age column (on which unique constraint has been defined)----------
+
+insert into table_key_constraints(id,name,age,address)values(3,'Nandi',null,'Allahabad');
+
+Message: 1 row(s) affected
+
+-------The above message indicates that the query has been successfully executed----------
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
