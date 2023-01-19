@@ -133,6 +133,25 @@ Similarly, for the table orders, primary key is order_id and the foreign key is 
 
 -----------------------------------------------------------------------------------------------------
 
+------------------------------DIFFERENCE BETWEEN DROP , TRUNCATE AND DELETE------------------
+
+
+DROP CLAUSE is used when we want to drop the entire table(i.e table + record) deletion will be there.
+By using the drop clause/command, the entire table will be removed completely.
+
+When we want to delelte the enitre table in one go, then we will be using the drop command 
+-----------------------------------------------------------------------------------------------------
+
+
+Truncate command will remove the entire data/column present in the table but the table will be created.
+When we want to delete the entire data of the table in one go, we will be using the truncate command
+
+------------------------------------------------------------------------------------------------------
+
+When we want to delete certain column present in the table, then we will be using the delete command along with the where clause.
+
+------------------------------------------------------------------------------------------------------
+
 
 
 
