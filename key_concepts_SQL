@@ -152,6 +152,33 @@ When we want to delete certain column present in the table, then we will be usin
 
 ------------------------------------------------------------------------------------------------------
 
+-------------------TRUNCATING THE TABLE HAVING FOREGIN KEY CONSTRAINTS----------------
+
+--------In order to truncate the table having the foreign key constraints, we have to use the below syntax:
+      SET FOREIGN_KEY_CHECKS = 0; 
+      TRUNCATE table $table_name; 
+      SET FOREIGN_KEY_CHECKS = 1;
+      
+----------Now in the above we have table name customer, having the foregin key constraints, we want to truncate this table,the syntax for the same is:-----------
+
+SET FOREIGN_KEY_CHECKS = 0; 
+TRUNCATE table customer; 
+SET FOREIGN_KEY_CHECKS = 1;
+
+With the help of the above syntax, the table revords get deleted and now only table with no data has been done.
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
