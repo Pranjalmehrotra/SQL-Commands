@@ -46,3 +46,18 @@ total_row_sum
 Now column (total_row_sum) is looking good
 
 -------------------------------------------------------------------------------------------------------------------------------
+
+
+                ------------Now if we want to select any particular columns present in the table---------------
+
+----------Now we want to select firstname and lastname from the table employee--------------
+
+Select firstname,lastname from employee;
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+--------Applying the concept of alias to the above selected columns------------
+
+Select firstname as fname,lastname as lname from employee;
+
+------------------------------------------------------------------------------------------------------------------------------
