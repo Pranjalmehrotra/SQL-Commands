@@ -1,0 +1,48 @@
+-------------------Creating a table called employee in the database(basic_query_3)---------------------------
+
+Create table if not exists employee (
+FirstName varchar (50),
+Address varchar(20),
+SecondName varchar(50),
+EmployeeId  int(10),
+hiring_date date);
+
+Insert into employee values('Pranjal' ,'Lucknow','Mehrotra',1,'2023/01/09');
+
+Insert into employee values('Rajesh' ,'Allahabad','Mehrotra',2,'2023/02/09');
+
+Insert into employee values('Nishi' ,'Lakhimpur','Mehrotra',3,'2023/03/09');
+
+Insert into employee values('Rishabh' ,'Noida','Mehrotra',4,'2023/04/09');
+
+Insert into employee values('Lavi' ,'Delhi','Mehrotra',5,'2023/05/09');
+
+---------------------------------------------------------------------------------------------------------------------------
+
+----------Now we want to count the total number of rows present in the table--------------------
+
+A. Without the alias:
+
+Select count(*) from employee;
+
+Output:
+
+count(*)
+5
+
+Now the column name (count *) is looking somewhat weird. In order to have some meaningful name, we have to use the concept of alias.
+
+---------------------------------------------------------------------------------------------------------------------------
+B. With alias:
+
+Select count(*) as total_row_sum from employee;
+
+Output:
+
+total_row_sum
+
+5
+
+Now column (total_row_sum) is looking good
+
+-------------------------------------------------------------------------------------------------------------------------------
