@@ -119,7 +119,9 @@ total_distinct_hiring_date
 4
 ----------------------------------------------------------------------------------------------------------
 
+----------------ADDING AN ADDITIONAL COLUMN IN THE TABLE-----------------
 
+Note: This additional column will not be a part of the table.We cannot directly access the column as we access the already defined columns of the table.
 
 
 
