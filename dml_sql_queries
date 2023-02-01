@@ -142,6 +142,24 @@ EmployeeId  FirstName   old_salary   new_salary
 3	          Nishi	      4000	      4800.00
 2	          Rajesh      5000	      6000.00
 
+--------------------------------------------------------------------------------------------------------------------------------
+      
+                                -----------------Updates Query----------------
+                                
+  Query5------->Now we want to update the salary of the entire employees to 40000.
+  
+  Update employee_details 
+	       set salary= 40000 ;
+     
+  ------------------------------------------------------------------------------------------------------------------------------
+  
+  Query6------->Update salary to 20% of the previous whose hiring_date = '2023-03-09':
+  
+  Update employee_details 
+	       set salary= (salary + 0.20 * salary)
+         where hiring_date = '2023-03-09';
+   
+   ----------------------------------------------------------------------------------------------------------------------------
 
 
 
