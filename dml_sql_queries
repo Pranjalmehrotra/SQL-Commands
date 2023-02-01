@@ -61,3 +61,44 @@ Select firstname,lastname from employee;
 Select firstname as fname,lastname as lname from employee;
 
 ------------------------------------------------------------------------------------------------------------------------------
+
+            ----------Creating the table(employee_details) for performing the various SQL queries operations------------------ 
+            
+
+Create table if not exists employee_details (
+FirstName varchar (50),
+Address varchar(20),
+SecondName varchar(50),
+EmployeeId  int(10),
+hiring_date date,
+salary int(50),
+city varchar(50));
+
+Insert into employee_details values('Rajesh' ,'Allahabad','Mehrotra',2,'2023/02/09',5000,'Rambagh');
+
+Insert into employee_details values('Nishi' ,'Lakhimpur','Mehrotra',3,'2023/03/09',4000,'Maurabad');
+
+Insert into employee_details values('Rishabh' ,'Noida','Mehrotra',4,'2023/04/09',3000,'jhalwa');
+
+Insert into employee_details values('Lavi' ,'Delhi','Mehrotra',5,'2023/05/09',1000,'chalk');
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+Query 1 -----> Display the total number of rows of records present in the aobve table
+
+Solution:
+Select count(*) as total_row_employee_details from  employee_details;
+
+Output:
+
+total_row_employee_details
+4
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
