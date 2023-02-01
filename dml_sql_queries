@@ -129,7 +129,7 @@ from the above table.
 Solution:
 
 SELECT EmployeeId,
-	   FirstName,
+       FirstName,
        salary as old_salary,
        (salary + salary * 0.20) as new_salary
 From   employee_details;
@@ -138,9 +138,9 @@ Output:
 
 EmployeeId  FirstName   old_salary   new_salary
 5	          Lavi	      1000	      1200.00
-4	          Rishabh	    3000	      3600.00
+4	          Rishabh     3000	      3600.00
 3	          Nishi	      4000	      4800.00
-2	          Rajesh	    5000	      6000.00
+2	          Rajesh      5000	      6000.00
 
 
 
