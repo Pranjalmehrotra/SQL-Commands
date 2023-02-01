@@ -161,6 +161,13 @@ EmployeeId  FirstName   old_salary   new_salary
    
    ----------------------------------------------------------------------------------------------------------------------------
 
-
+  ----------------------DELETING CERTAIN RECORDS FROM THE TABLE------------------------
+  
+  Query 7 ------->Delete the record from the above table whose EmployeId = 2;
+  
+  delete from employee_details
+       where EmployeeId = 2;
+       
+  ----------------------------------------------------------------------------------------------------------------------------
 
 
