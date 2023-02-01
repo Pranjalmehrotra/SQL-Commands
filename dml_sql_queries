@@ -96,6 +96,29 @@ total_row_employee_details
 4
 ---------------------------------------------------------------------------------------------------------------------
 
+Query 2 -------> Display the Distinct hiring_date from the table employee_details:
+
+Select Distinct(hiring_date) as distinct_hiring_date from employee_details;
+
+Output:
+distinct_hiring_date
+2023-02-09
+2023-03-09
+2023-04-09
+2023-05-09
+
+-----------------------------------------------------------------------------------------------------------
+
+Query 3 ------> Count the distinct number of hiring dates present in the above table
+
+Select count(Distinct(hiring_date))as total_distinct_hiring_date from employee_details;
+
+Output:
+
+total_distinct_hiring_date
+4
+----------------------------------------------------------------------------------------------------------
+
 
 
 
