@@ -219,4 +219,41 @@ Output:
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-       	
+       					-------------------------LIKE CLAUSE---------------------
+	
+This clause is used for the string data type of the column
+
+There are 2 operators which are associated with the like clause:
+
+% ---->  Zero,One or more than one characters
+_ ---->  Only one character is there
+
+Query----->Fetch all the records where FirstName starts with N
+
+
+Select * from employee_details
+         where FirstName like 'N%';
+
+Output:
+
+	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
+	Nishi		Lakhimpur	Mehrotra	3		2023-03-09	40000	Maurabad
+
+------------------------------------------------------------------------------------------------------------
+
+Query ------>Fetch all the records where lastName ends with h:
+
+
+Select * from employee_details
+         where FirstName like '%h';
+
+Output:
+
+	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
+	Rishabh		Noida		Mehrotra	4		2023-04-09	40000	jhalwa
+	Rajesh		Allahabad	Mehrotra	2		2023-02-09	5000	Rambagh
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
