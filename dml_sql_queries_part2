@@ -201,5 +201,22 @@ Output:
 	
 --------------------------------------------------------------------------------------------------------------------------
 
+--------------------USE OF BETWEEN CLAUSE-------------------------
+
+Query-------> Select all the records where hiring date is between 2023-03-09 and 2023-04-09
+
+
+Select * from employee_details
+         where hiring_date
+         between '2023-03-09' and '2023-04-09' ;
+
+
+Output:
+
+	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
+	Nishi		Lakhimpur	Mehrotra	3		2023-03-09	40000	Maurabad
+	Rishabh		Noida		Mehrotra	4		2023-04-09	40000	jhalwa
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 
        	
