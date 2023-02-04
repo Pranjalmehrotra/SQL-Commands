@@ -271,3 +271,19 @@ Output:
 	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
 	Rishabh		Noida		Mehrotra	4		2023-04-09	40000	jhalwa
 	Rajesh		Allahabad	Mehrotra	2		2023-02-09	5000	Rambagh
+
+-----------------------------------------------------------------------------------------------------------------
+
+Note---->Now when we know the exact number of characters to be displayed we go for the _ symbol.
+
+Query ----->Display all the records where the name has exactly 5 charchters
+
+Select * from employee_details
+         where FirstName like'_____';
+
+Output:
+
+	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
+	Nishi		Lakhimpur	Mehrotra	3		2023-03-09	40000	Maurabad
+
+-------------------------------------------------------------------------------------------------------------------
