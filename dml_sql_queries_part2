@@ -90,7 +90,20 @@ Rishabh	     Noida	   Mehrotra	  4	        2023-04-09	 40000	  jhalwa
 
 ---------In MySql, we can sort the data either in ascending or descinding order as per the requirement.-------------
 
-Query---->We want to display the above table we want to 
+Query---->We want to display the above table with name in  descending order.The query for the same is:
+
+Select * from employee_details 
+		 order by FirstName desc;
+	
+	
+Output:
+
+	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
+	Rishabh		Noida		Mehrotra	4		2023-04-09	40000	jhalwa
+	Rajesh		Allahabad	Mehrotra	2		2023-02-09	5000	Rambagh
+	Nishi		Lakhimpur	Mehrotra	3		2023-03-09	40000	Maurabad
+	Lavi		Allahabad	Mehrotra	5		2023-05-09	20000	chalk
+	Lavi		Allahabad	Mehrotra	5		2023-05-09	20000	chalk
 
 
 
