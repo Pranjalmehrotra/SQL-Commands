@@ -106,6 +106,27 @@ Output:
 	Lavi		Allahabad	Mehrotra	5		2023-05-09	20000	chalk
 
 
+-----------------------------------------------------------------------------------------------------------------------------
+
+Query------->Display employee data in descending order of salary and if salary of 2 employees matches, then display in ascending order.
+
+Select * from employee_details 
+		 order by Salary desc,
+         FirstName asc;
+	 
+Output:
+	FirstName	Address		SecondName EmployeeId   hiring_date	salary	        city
+	Nishi		Lakhimpur	Mehrotra	3	2023-03-09	40000		Maurabad
+	Rishabh		Noida		Mehrotra	4	2023-04-09	40000		jhalwa
+	Lavi		Allahabad	Mehrotra	5	2023-05-09	21000		chalk
+	Lavi		Allahabad	Mehrotra	5	2023-05-09	21000		chalk
+	Rajesh		Allahabad	Mehrotra	2	2023-02-09	5000		Rambagh
+	
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
