@@ -125,10 +125,39 @@ Output:
 --------------------------------------------------------------------------------------------------------------------------------------
 
 
+Query -------> Select the employee with the highest salary among all the salary
 
+Select * from employee_details 
+		 order by Salary desc 
+         limit 1;
 
+Output:
 
+	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
+	Nishi		Lakhimpur	Mehrotra	3		2023-03-09	40000	Maurabad
 
+-------------------------------------------------------------------------------------------------------------------
+
+------------------------OPERATORS IN MY SQL AND USE CASE IN WHERE CLAUSE-----------------------
+
+CONDITIONAL OPERATORS------> <, >, <=, >=
+
+LOGICAL OPERATORS-------> AND,OR,NOT
+
+-------------------------------------------------------------------------------------------------------------------
+
+Query--->List all the employees whose salary > 20000:
+
+ Select * from employee_details
+		 where salary>20000;
+		 
+Output:
+
+	FirstName	Address		SecondName EmployeeId   hiring_date	salary	        city
+	Nishi		Lakhimpur	Mehrotra	3	2023-03-09	40000		Maurabad
+	Rishabh		Noida		Mehrotra	4	2023-04-09	40000		jhalwa
+	Lavi		Allahabad	Mehrotra	5	2023-05-09	21000		chalk
+	Lavi		Allahabad	Mehrotra	5	2023-05-09	21000		chalk
 
 
        	
