@@ -251,9 +251,23 @@ Output:
 
 	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
 	Rishabh		Noida		Mehrotra	4		2023-04-09	40000	jhalwa
-	Rajesh		Allahabad	Mehrotra	2		2023-02-09	5000	Rambagh
+	Rajesh		Allahabad	Mehrotra	2		2023-02-09	5000	Rambagh 
 
 -------------------------------------------------------------------------------------------------------------
 
+Note----> When we dont have idea of the length of the characters, then always go for the percent symbol.
+h%-----> Name should start with the h word
+%h----->Name will end with h word
+A%h---->Name start with A and end with h.In between, we dont know how many characters are there
+--------------------------------------------------------------------------------------------------------------
 
+Query----->Display the records where Name starts with R and ends with h
 
+Select * from employee_details
+         where FirstName like 'R%h';
+
+Output:
+
+	FirstName	Address		SecondName	EmployeeId	hiring_date	salary	city
+	Rishabh		Noida		Mehrotra	4		2023-04-09	40000	jhalwa
+	Rajesh		Allahabad	Mehrotra	2		2023-02-09	5000	Rambagh
