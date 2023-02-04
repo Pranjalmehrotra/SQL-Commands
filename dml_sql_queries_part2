@@ -159,5 +159,47 @@ Output:
 	Lavi		Allahabad	Mehrotra	5	2023-05-09	21000		chalk
 	Lavi		Allahabad	Mehrotra	5	2023-05-09	21000		chalk
 
+-------------------------------------------------------------------------------------------------------------------------
+
+Query ---->Select  the records where salary of the employee is equal to 40000
+
+Select * from employe_details
+       where salary = 40000;
+ 
+ Output:
+ 
+ 	FirstName	Address	        SecondName	EmployeeId	hiring_date	salary	city
+	Nishi	        Lakhimpur	Mehrotra	3	2023-03-09	40000	Maurabad
+	Rishabh	        Noida	        Mehrotra	4	2023-04-09	40000	jhalwa
+------------------------------------------------------------------------------------------------------------------------
+
+Query ---->Select  the records where salary of the employee is  not equal to 40000
+
+Select * from employee_details
+		 where salary != 40000;
+		 
+		 
+Output:
+
+	FirstName Address	SecondName	EmployeeId	hiring_date	salary	city
+	Lavi	Allahabad	Mehrotra	5	        2023-05-09	21000	chalk
+	Lavi	Allahabad	Mehrotra	5	        2023-05-09	21000	chalk
+	Rajesh	Allahabad	Mehrotra	2	        2023-02-09	5000	Rambagh
+----------------------------------------------------------------------------------------------------------------------
+
+Query-----> Select all the records where hiring date =2023-05-09 and salary is less than 40000
+
+Select * from employee_details
+         where hiring_date = '2023-05-09'
+         and salary < 40000;
+
+Output:
+
+	FirstName Address	SecondName	EmployeeId	hiring_date	salary	city
+	Lavi	  Allahabad	Mehrotra	5	        2023-05-09	21000	chalk
+	Lavi	  Allahabad	Mehrotra	5	        2023-05-09	21000	chalk
+	
+--------------------------------------------------------------------------------------------------------------------------
+
 
        	
