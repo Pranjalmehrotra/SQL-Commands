@@ -1,0 +1,33 @@
+----------------------------------Updating Multiple Columns Using One Update Command----------------------------
+
+----------We have table as shown below---------
+
+FirstName   Address      SecondName EmployeeId  hiring_date  salary   city
+Nishi	      Lakhimpur	    Mehrotra	  3	        2023-03-09	 40000	  Maurabad
+Rishabh	    Noida	        Mehrotra	  4	        2023-04-09	 40000	  jhalwa
+Lavi    	  Delhi	        Mehrotra	  5	        2023-05-09	 40000	  chalk
+Lavi	      Delhi	        Mehrotra	  5	        2023-05-09	 1000	    chalk
+Rajesh	    Allahabad	    Mehrotra	  2	        2023-02-09	 5000	    Rambagh
+---------------------------------------------------------------------------------------------------------------
+
+Query 1 ------>Query to update the set the Address to 'Allahabad' and salary to 20000 of the employes whose hiring_date = '2023-05-09'
+
+update employee_details 
+	     set Address = 'Allahabad',
+       salary = 20000 
+       where hiring_date = '2023-05-09';	
+--------------------------------------------------------------------------------------------------------------
+
+After the successful execution of the above, the update table is as shown below:
+       
+FirstName   Address      SecondName EmployeeId  hiring_date  salary   city
+Nishi	      Lakhimpur	    Mehrotra	  3	        2023-03-09	 40000	  Maurabad
+Rishabh	    Noida	        Mehrotra	  4	        2023-04-09	 40000	  jhalwa
+Lavi    	  Allahabad     Mehrotra	  5	        2023-05-09	 40000	  chalk
+Lavi	      Allahabad     Mehrotra	  5	        2023-05-09	 1000	    chalk
+Rajesh	    Allahabad	    Mehrotra	  2	        2023-02-09	 5000	    Rambagh
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+       	
