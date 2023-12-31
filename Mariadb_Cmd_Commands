@@ -1,0 +1,4 @@
+#######################################################  MARIA DB IMP CMD COMMANDS #######################################################################################
+
+1. The first command to enter the mariab db server is:
+mysql -u root -p
