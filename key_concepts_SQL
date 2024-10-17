@@ -18,10 +18,9 @@ Note---->Always follow the method 2 approach-----------
 --------Method two---------
 
 Create table table_key_constraints(
-id int,
-name varchar(40),
-age int(40),
-constraint primaryconstraint primary key (id)
+user_id int not null primary key,
+last_name varchar(40),
+age int
 );
 
 -------------------------------------------------------------------------------------------------------------
