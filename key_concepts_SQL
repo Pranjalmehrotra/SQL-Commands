@@ -33,11 +33,50 @@ age int
 Create table table_key_constraints(
 id int,
 name varchar(40),
-age int(40),
+age int,
 constraint primaryconstraint primary key (id,name)
 );
 
+******************************Note****************************:::
+
+If we have already define muliple primary keys with one name and we want to create table and again define the multiple primary keys with the same name, then the below error
+will be coming as shown::
+
+Create table table_key_constraints2(
+id int,
+name varchar(40),
+age int,
+constraint primaryconstraint primary key (age,name)
+);
+
+ERROR:  relation "primaryconstraint" already exists 
+
+SQL state: 42P07
+
 ----------------------------------------------------------------------------------------------------------------
+
+*********************Creating tables with including all the integerity constrainsts*************************************
+
+create table account_details(
+user_id int primary key,
+username varchar(50) unique not null,
+user_password varchar(100) not null,
+user_email varchar(400) unique not null,
+created_on timestamp not null,
+last_login timestamp 
+);
+
+create table job(
+job_id int primary key,
+job_name varchar(50) unique not null
+);
+
+create table account_job(
+user_id int references account_details(user_id),
+job_id int references job(job_id)
+);
+
+
 
 ------Inserting the values into the above created table-----------
 
@@ -107,7 +146,7 @@ Table 2----> Orders
 use basic_query_3;
 
 create table customer(
-cus_id int(10),
+cus_id int,
 cus_name varchar(50),
 cus_address varchar(50)
 );
@@ -117,10 +156,10 @@ alter table customer add constraint pk primary key(cus_id);
 ---------------------------------------------------------------------------------------------
 
 create table orders(
-order_id int(10),
-customer_id int(10),
-order_num int(10),
-constraint pk primary key(order_id),
+order_id int,
+customer_id int,
+order_num int,
+constraint pk_orders primary key(order_id),
 constraint fk foreign key(customer_id) references customer(cus_id)
 );
 ----------------------------------------------------------------------------------------------
