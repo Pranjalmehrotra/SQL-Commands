@@ -7,8 +7,9 @@
 Create table table_key_constraints(
 id int,
 name varchar(40),
-age int(40),
-primary key (id),
+age int,
+primary key (id)
+);
 
 
 Note---->Always follow the method 2 approach-----------
