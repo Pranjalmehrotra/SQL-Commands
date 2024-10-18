@@ -76,6 +76,71 @@ user_id int references account_details(user_id),
 job_id int references job(job_id)
 );
 
+insert into account_details(user_id,username,user_password,user_email,created_on)
+values 
+(1,'Pranjal','1234567890','pranjalmehrotra123@gmail.com',CURRENT_TIMESTAMP),
+(2,'Nishi','567890','nishimehrotra213@gmail.com',CURRENT_TIMESTAMP);
+
+
+*********************************Updating the column*********************************************
+Update account_details
+Set last_login = created_on;
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+******************Updating the column hiring_date of account_job wrt the account details of a particular user*************************
+
+update account_job
+set hiring_date = account_details.created_on
+From account_details
+where account_job.user_id = account_details.user_id;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+********************************Altering the table*****************************************************
+
+alter table account_details
+rename column username to user_name;
+
+alter table account_details
+alter column created_on drop not null
+
+--------------------------------------------------------------------------------------------------------------------------------------
+**************Now creating table with the check constraints as shown below*****************************
+
+create table hr_details(
+hr_id int primary key,
+hr_username varchar(60) unique not null,
+hr_first_name varchar(60) not null,
+hr_last_name varchar(60) not null,
+hr_birthdate date not null check(hr_birthdate > '1996-09-15'),
+hr_hiring date not null check(hr_hiring  > hr_birthdate),
+hr_salary int check(hr_salary > 0)
+);
+
+insert into hr_details(
+hr_id ,
+hr_username,
+hr_first_name,
+hr_last_name,
+hr_birthdate,
+hr_hiring,
+hr_salary
+)
+values
+(1,'p52','pranjal','mehrotra','1998-09-17','1999-09-15',0);
+
+Now the error which is coming is shown below::
+ERROR:  Failing row contains (1, p52, pranjal, mehrotra, 1998-09-17, 1999-09-15, 0).new row for relation "hr_details" violates check constraint "hr_details_hr_salary_check" 
+
+ERROR:  new row for relation "hr_details" violates check constraint "hr_details_hr_salary_check"
+SQL state: 23514
+Detail: Failing row contains (1, p52, pranjal, mehrotra, 1998-09-17, 1999-09-15, 0).
+
+
+
+
+
+
 
 
 ------Inserting the values into the above created table-----------
